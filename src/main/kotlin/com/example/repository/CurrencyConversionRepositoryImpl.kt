@@ -6,7 +6,6 @@ import com.example.models.CurrencyData
 
 class CurrencyConversionRepositoryImpl : CurrencyConversionRepository {
     override suspend fun convertCurrencyAmount(data: CurrencyData): ApiResponse {
-        println("currency: ${data.conversionCurrency}")
         return when (data.conversionCurrency) {
             CurrenciesEnum.USD.name -> {
                 ApiResponse(
